@@ -1,1 +1,1 @@
-# llm-zoomcamp
+# Zoomcamp llm Course
