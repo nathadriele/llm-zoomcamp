@@ -1,0 +1,167 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1722152262
+      name: runic_oblivion.py
+      output: null
+      path: /home/src/default_repo/llm/rager/data_loaders/runic_oblivion.py
+      relative_path: llm/rager/data_loaders/runic_oblivion.py
+      size: 1406
+    file_source:
+      path: rager/data_loaders/runic_oblivion.py
+    templates:
+      api:
+        variables:
+          auth_token: null
+          endpoint: https://raw.githubusercontent.com/DataTalksClub/llm-zoomcamp/main/01-intro/documents.json
+          method: GET
+          timeout: 30
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - ingest
+  has_callback: false
+  language: python
+  name: Runic oblivion
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: runic_oblivion
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/radiant_photon.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - chunking
+  has_callback: false
+  language: python
+  name: Radiant photon
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: radiant_photon
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/vivid_nexus.py
+    templates:
+      lemmatization_spacy:
+        variables:
+          handle_stopwords: false
+          language: en
+          use_pos_tags: true
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - tokenization
+  has_callback: false
+  language: python
+  name: Vivid nexus
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: vivid_nexus
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/prismatic_axiom.py
+    templates:
+      spacy_embeddings:
+        variables:
+          model_name: en_core_web_sm
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - embed
+  has_callback: false
+  language: python
+  name: Prismatic axiom
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: prismatic_axiom
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1722154146
+      name: numinous_fission.py
+      output: null
+      path: /home/src/default_repo/llm/rager/data_exporters/numinous_fission.py
+      relative_path: llm/rager/data_exporters/numinous_fission.py
+      size: 2054
+    file_source:
+      path: rager/data_exporters/numinous_fission.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://host.docker.internal:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Numinous fission
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks: []
+  uuid: numinous_fission
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-07-28 06:46:55.938489+00:00'
+data_integration: null
+description: null
+execution_framework: rag
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: RAGic
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: ragic
+variables_dir: /root/.mage_data/rager
+widgets: []
