@@ -2,6 +2,10 @@
 
 [More details](https://github.com/DataTalksClub/llm-zoomcamp?tab=readme-ov-file)
 
+🟢 **Final project developed**
+
+https://github.com/nathadriele/biophenotype-rag
+
 ![image](https://github.com/user-attachments/assets/73ed29fa-7c76-44dd-b579-277fe2a94956)
 
 ## 1. Introduction to LLMs and RAG
